@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>Регистрация - Toys.com</title>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html" class="logo">
+                <img src="https://cdn-icons-png.flaticon.com/512/2820/2820769.png" alt="Логотип" class="logo-image">
+                <span>Toys.com</span>
+            </a>
+        </div>
+        <nav class="navigation">
+            <a href="index.html" class="knopka">Главная</a>
+            <a href="registr.html" class="knopka">Регистрация</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="auth-container">
+            <form class="auth-form" id="authForm">
+                <h2 style="text-align: center; margin-bottom: 20px; color: #0e172c;">Вход в аккаунт</h2>
+                
+                <div class="form-group">
+                    <label for="login">Логин:</label>
+                    <input type="text" id="login" name="login" required placeholder="Введите ваш логин">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Пароль:</label>
+                    <input type="password" id="password" name="password" required placeholder="Введите ваш пароль">
+                </div>
+                
+                <div class="form-group" id="nameField" style="display: none;">
+                    <label for="name">Ваше имя:</label>
+                    <input type="text" id="name" name="name" placeholder="Введите ваше имя">
+                </div>
+                
+                <div class="form-group" id="emailField" style="display: none;">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Введите ваш email">
+                </div>
+                
+                <button type="submit" class="submit-button">Войти</button>
+                
+                <div class="toggle-form">
+                    <a href="#" id="toggleForm">Создать аккаунт</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>Практическая работа 3\\Васюкова Анна\\Магазин Игрушек</p>
+    </footer>
+
+    <script type="module" src="js/auth-handler.js"></script>
+</body>
+</html>

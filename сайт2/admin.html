@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>Админка - Toys.com</title>
+</head>
+<body>
+<div id="supabaseStatus" class="supabase-status">
+    ⚠️ Supabase не настроен. Загрузка изображений не будет работать!
+</div>
+
+    <header>
+        <div class="logo-container">
+            <a href="index.html" class="logo">
+                <img src="https://cdn-icons-png.flaticon.com/512/2820/2820769.png" alt="Логотип" class="logo-image">
+                <span>Toys.com - Админка</span>
+            </a>
+        </div>
+        <nav class="navigation">
+            <a href="index.html" class="knopka">Главная</a>
+            <a href="registr.html" class="knopka" id="logoutBtn">Выйти</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="admin-container">
+            <h1>Панель администратора</h1>
+            
+            <div id="message" class="message"></div>
+            
+            <div class="admin-section">
+                <h2 id="formTitle">Добавить товар</h2>
+                <form id="productForm">
+                    <div class="form-group">
+                        <label for="name">Название товара:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Описание:</label>
+                        <textarea id="description" name="description" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Цена (₽):</label>
+                        <input type="number" id="price" name="price" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Изображение товара:</label>
+                        <div class="image-upload-section">
+                            <button type="button" class="btn-secondary" id="selectImageBtn">
+                                Выбрать изображение
+                            </button>
+                            <span class="file-info" id="fileInfo">Файл не выбран</span>
+                            <input type="file" id="imageFile" accept="image/*" class="file-input">
+                            <img id="imagePreview" class="image-preview" src="" alt="Превью">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="category">Категория:</label>
+                        <input type="text" id="category" name="category" required>
+                    </div>
+                    <button type="submit" class="btn-primary" id="submitBtn">Добавить</button>
+                    <button type="button" class="btn-danger" id="cancelEdit">Отмена</button>
+                </form>
+            </div>
+
+            <div class="admin-section">
+                <h2>Управление товарами</h2>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Изображение</th>
+                            <th>Название</th>
+                            <th>Описание</th>
+                            <th>Цена</th>
+                            <th>Категория</th>
+                            <th>Действия</th>
+                        </tr>
+                    </thead>
+                    <tbody id="goodsTable">
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="admin-section">
+                <h2>Управление пользователями</h2>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Логин</th>
+                            <th>Имя</th>
+                            <th>Email</th>
+                            <th>Роль</th>
+                            <th>Действия</th>
+                        </tr>
+                    </thead>
+                    <tbody id="usersTable">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Практическая работа 3\\Васюкова Анна\\Магазин Игрушек</p>
+    </footer>
+
+    <script type="module" src="js/admin.js"></script>
+</body>
+</html>

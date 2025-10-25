@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>Товар - Toys.com</title>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html" class="logo">
+                <img src="https://cdn-icons-png.flaticon.com/512/2820/2820769.png" alt="Логотип" class="logo-image">
+                <span>Toys.com</span>
+            </a>
+        </div>
+        <nav class="navigation">
+            <a href="index.html" class="knopka">Главная</a>
+            <a href="registr.html" class="knopka">Авторизация</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="product-page">
+            <div class="product-container">
+                <div class="product-gallery">
+                    <img src="" alt="" class="main-image" id="productImage">
+                </div>
+                
+                <div class="product-details">
+                    <h1 id="productName"></h1>
+                    <div class="product-price" id="productPrice"></div>
+                    <p id="productDescription"></p>
+                    
+                    <div class="product-features">
+                        <h3>Основные характеристики:</h3>
+                        <ul class="feature-list">
+                            <li>Высокое качество материалов</li>
+                            <li>Безопасно для детей</li>
+                            <li>Развивающие функции</li>
+                            <li>Сертифицированная продукция</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button class="buy-button" id="buyButton">Добавить в корзину</button>
+                        <button class="wishlist-button" id="wishlistButton">❤</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Практическая работа 1\\Васюкова Анна\\Магазин Игрушек</p>
+    </footer>
+
+    <script type="module">
+    // Временный код прямо в HTML
+    import { goods } from './js/data.js';
+    
+    console.log('=== PRODUCT CODE IN HTML ===');
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+        
+        console.log('Product ID:', productId);
+        console.log('All goods:', goods);
+        
+        if (productId) {
+            const product = goods.find(p => p.id == productId);
+            console.log('Found product:', product);
+            
+            if (product) {
+                // Заполняем данные
+                document.getElementById('productImage').src = product.image;
+                document.getElementById('productName').textContent = product.name;
+                document.getElementById('productPrice').textContent = product.price + ' ₽';
+                document.getElementById('productDescription').textContent = product.description;
+                
+                // Обработчики кнопок
+                document.getElementById('buyButton').addEventListener('click', () => {
+                    alert(`Товар "${product.name}" добавлен в корзину!`);
+                });
+                
+                document.getElementById('wishlistButton').addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    this.style.background = this.classList.contains('active') ? '#fec7d7' : '#f8f9fa';
+                });
+            }
+        }
+    });
+</script>
+</body>
+</html>

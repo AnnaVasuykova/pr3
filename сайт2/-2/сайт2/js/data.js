@@ -1,0 +1,84 @@
+const goods = [
+    {
+        id: 1,
+        name: "Детский конструктор",
+        description: "Развивающий конструктор для детей от 3 лет. 250 деталей разных цветов.",
+        price: 1500,
+        image: "https://www.yugtoys.ru/upload/resize_cache/iblock/a2f/200_200_1/pks0fo4xp2a93fw5b720qvm0jc103rua.jpg",
+        category: "constructors"
+    },
+    {
+        id: 2,
+        name: "Интерактивная кукла",
+        description: "Кукла, которая умеет говорить и смехаться. В комплекте одежда и аксессуары.",
+        price: 4700,
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVJPiGosDx98dMRKKLbtG4YTstloRXunBcCQ&s",
+        category: "dolls"
+    },
+    {
+        id: 3,
+        name: "Машинка на пульте",
+        description: "Спортивная машинка с радиоуправлением. Дальность действия до 30 метров.",
+        price: 3500,
+        image: "https://sportride.ru/image/cache/catalog/images/tovary/radioupravlyaemyemodeli/radioupravlyaemyeavtomodeli/Rastar/RAS-71010-1-500x500.jpg",
+        category: "transport"
+    },
+    {
+        id: 4,
+        name: "Пазлы для малышей",
+        description: "Набор пазлов из 60 элементов с любимыми мультяшными героями вашего ребенка.",
+        price: 500,
+        image: "https://coloring.otk7.com/admin/uploads/4/0/3//182304.jpg",
+        category: "puzzles"
+    },
+    {
+        id: 5,
+        name: "Мягкий мишка",
+        description: "Плюшевый мишка высотой 40 см. Гипоаллергенный материал, безопасен для детей.",
+        price: 1200,
+        image: "https://avatars.mds.yandex.net/get-mpic/5215227/2a00000190ce70e2555479a42b5b04a23708/orig",
+        category: "soft"
+    },
+    {
+        id: 6,
+        name: "Набор для творчества",
+        description: "Набор для создания браслетов и брелоков. Развивает моторику и творческое мышление.",
+        price: 1500,
+        image: "https://ir-3.ozone.ru/s3/multimedia-j/c1000/6631167295.jpg",
+        category: "creative"
+    },
+    {
+        id: 7,
+        name: "Детская железная дорога",
+        description: "Набор железной дороги с поездом, станциями и аксессуарами. Работает от батареек.",
+        price: 2500,
+        image: "https://main-cdn.sbermegamarket.ru/big2/hlr-system/1692524/100023407775b0.jpg",
+        category: "transport"
+    },
+    {
+        id: 8,
+        name: "Набор юного доктора",
+        description: "Игровой набор с медицинскими инструментами. Развивает социальные навыки и воображение.",
+        price: 3000,
+        image: "https://resources.cdn-kaspi.kz/img/m/p/hca/h70/85485739147294.jpg?format=gallery-large",
+        category: "roleplay"
+    }
+];
+
+// Пользователи
+const users = [
+    {
+        id: 1,
+        login: "admin",
+        password: "123456",
+        name: "Админ"
+    },
+    {
+        id: 2,
+        login: "user",
+        password: "password",
+        name: "Пользователь"
+    }
+];
+
+export { goods, users };
